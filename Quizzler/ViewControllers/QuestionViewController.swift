@@ -41,7 +41,8 @@ class QuestionViewController: UIViewController {
         trueButton.layer.borderColor = UIColor.white.cgColor
         falseButton.layer.borderColor = UIColor.white.cgColor
     }
-
+    
+    // MARK: - Prepare fo segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         
@@ -83,6 +84,7 @@ class QuestionViewController: UIViewController {
     }
 }
 
+// MARK: - ResultViewContollerDelegate
 extension QuestionViewController: ResultViewControllerDelegate {
     func restart(withIndex index: Int, count: Int, shuffleQuestions: [Question], andQuestion question: String) {
         questionIndex = index

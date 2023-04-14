@@ -9,13 +9,16 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var rightQuestionsLabel: UILabel!
     @IBOutlet var restartButton: UIButton!
     
+    // MARK: - Properties
     var rightQuestionsCount: Int!
     var questions: [Question]!
     unowned var delegate: ResultViewControllerDelegate!
     
+    // MARK: - View Life Circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +29,7 @@ class ResultViewController: UIViewController {
         rightQuestionsLabel.text = "You have \(rightQuestionsCount.formatted())/\(questions.count) right answers! 😊"
     }
     
+    // MARK: - IB Actions
     @IBAction func restartButtonPressed() {
         questions.shuffle()
         
