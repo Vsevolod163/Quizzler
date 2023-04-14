@@ -15,30 +15,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quiz" translatesAutoresizingMaskIntoConstraints="NO" id="L4o-o9-0XT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-wW-X6y">
-                                <rect key="frame" x="16" y="408" width="288" height="140"/>
+                                <rect key="frame" x="16" y="388" width="288" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-cX-FcW">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="66"/>
-                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="27"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="True">
-                                            <color key="titleColor" red="0.77647060160000003" green="0.4196078479" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
+                                        <state key="normal" title="True"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URE-Av-SqL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-Yl-3qm">
                                         <rect key="frame" x="0.0" y="74" width="288" height="66"/>
-                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="27"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="False">
-                                            <color key="titleColor" red="0.77787767621181536" green="0.41911033748780813" blue="0.86398790829145722" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
+                                        <state key="normal" title="False"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8A-Pa-IPK"/>
                                         </connections>
@@ -48,26 +41,23 @@
                                     <constraint firstAttribute="height" constant="140" id="zuh-n8-6cR"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJU-Ut-EJE">
-                                <rect key="frame" x="16" y="70" width="288" height="33"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Столица" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJU-Ut-EJE">
+                                <rect key="frame" x="16" y="0.0" width="288" height="372"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.53439860111070647" green="0.57406171482412061" blue="0.54700355011128698" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.098483754671093382" green="0.031079204123067913" blue="0.23111652010050254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="L4o-o9-0XT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="875-Zu-aWq"/>
-                            <constraint firstItem="L4o-o9-0XT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AuW-ON-jG2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PsM-wW-X6y" secondAttribute="bottom" constant="20" id="Fz7-83-MId"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PsM-wW-X6y" secondAttribute="bottom" constant="40" id="Fz7-83-MId"/>
                             <constraint firstItem="CJU-Ut-EJE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jyc-ZT-TWV"/>
+                            <constraint firstItem="PsM-wW-X6y" firstAttribute="top" secondItem="CJU-Ut-EJE" secondAttribute="bottom" constant="16" id="K50-sb-QhD"/>
                             <constraint firstItem="PsM-wW-X6y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XGZ-rE-jub"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsM-wW-X6y" secondAttribute="trailing" constant="16" id="dHR-bu-8gs"/>
-                            <constraint firstItem="L4o-o9-0XT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ea9-12-NEc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CJU-Ut-EJE" secondAttribute="trailing" constant="16" id="hug-KX-3RP"/>
-                            <constraint firstItem="L4o-o9-0XT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mBy-FM-mqm"/>
-                            <constraint firstItem="CJU-Ut-EJE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pqG-dy-NLz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="CJU-Ut-EJE" secondAttribute="top" constant="20" id="pqG-dy-NLz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -81,7 +71,4 @@
             <point key="canvasLocation" x="1134.375" y="-106.69014084507042"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="quiz" width="450" height="360"/>
-    </resources>
 </document>

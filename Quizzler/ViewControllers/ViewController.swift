@@ -34,9 +34,9 @@ class ViewController: UIViewController {
 
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        nextQuestion()
         questionLabel.text = questions[questionIndex].title
         
-        nextQuestion()
     }
     
     private func nextQuestion() {
