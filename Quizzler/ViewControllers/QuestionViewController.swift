@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ResultViewControllerDelegate: AnyObject {
+    func restart(withIndex index: Int, count: Int, shuffleQuestions: [Question], andQuestion question: String)
+}
+
 class QuestionViewController: UIViewController {
 
     // MARK: - IB Outlets
@@ -16,7 +20,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet var falseButton: UIButton!
     
     // MARK: - Private properties
-    private let questions = Question.getQuestions()
+    private var questions = Question.getQuestions()
     private var questionIndex = 0
     private var isButtonTapped = true
     private var rigthQuestionsCount = 0
@@ -24,7 +28,8 @@ class QuestionViewController: UIViewController {
     // MARK: - View life circle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        questions.shuffle()
         questionLabel.text = questions[questionIndex].title
         
         trueButton.layer.cornerRadius = 20
@@ -41,6 +46,8 @@ class QuestionViewController: UIViewController {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         
         resultVC.rightQuestionsCount = rigthQuestionsCount
+        resultVC.questions = questions
+        resultVC.delegate = self
     }
     
     // MARK: - IB Actions
@@ -76,3 +83,11 @@ class QuestionViewController: UIViewController {
     }
 }
 
+extension QuestionViewController: ResultViewControllerDelegate {
+    func restart(withIndex index: Int, count: Int, shuffleQuestions: [Question], andQuestion question: String) {
+        questionIndex = index
+        rigthQuestionsCount = count
+        questions = shuffleQuestions
+        questionLabel.text = question
+    }
+}
