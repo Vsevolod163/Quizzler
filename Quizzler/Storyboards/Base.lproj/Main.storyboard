@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,11 +64,58 @@
                         <outlet property="falseButton" destination="8iJ-Yl-3qm" id="CuN-ek-Lyz"/>
                         <outlet property="questionLabel" destination="CJU-Ut-EJE" id="0ne-KQ-ay2"/>
                         <outlet property="trueButton" destination="EKa-cX-FcW" id="6uE-nO-KEw"/>
+                        <segue destination="ecF-5y-E0S" kind="presentation" identifier="showResult" modalPresentationStyle="fullScreen" id="71e-cN-vYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134.375" y="-106.69014084507042"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="HSF-ov-tw1">
+            <objects>
+                <viewController id="ecF-5y-E0S" customClass="ResultViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHS-Vc-bUP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответа" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mus-Yt-edD">
+                                <rect key="frame" x="16" y="20" width="288" height="352"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-Tp-WNM">
+                                <rect key="frame" x="16" y="388" width="288" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ZvA-gx-Jlw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Restart"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CqP-53-ujc"/>
+                        <color key="backgroundColor" red="0.098483754670000007" green="0.031079204119999999" blue="0.2311165201" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mus-Yt-edD" firstAttribute="leading" secondItem="CqP-53-ujc" secondAttribute="leading" constant="16" id="9ak-3Y-u0x"/>
+                            <constraint firstItem="t6M-Tp-WNM" firstAttribute="leading" secondItem="CqP-53-ujc" secondAttribute="leading" constant="16" id="E3j-d8-dog"/>
+                            <constraint firstItem="CqP-53-ujc" firstAttribute="bottom" secondItem="t6M-Tp-WNM" secondAttribute="bottom" constant="110" id="GPY-Sq-oDL"/>
+                            <constraint firstItem="CqP-53-ujc" firstAttribute="trailing" secondItem="mus-Yt-edD" secondAttribute="trailing" constant="16" id="Wc3-yu-8Qm"/>
+                            <constraint firstItem="CqP-53-ujc" firstAttribute="trailing" secondItem="mus-Yt-edD" secondAttribute="trailing" constant="16" id="aIJ-LH-5KW"/>
+                            <constraint firstItem="t6M-Tp-WNM" firstAttribute="top" secondItem="mus-Yt-edD" secondAttribute="bottom" constant="16" id="aJi-f2-Lek"/>
+                            <constraint firstItem="mus-Yt-edD" firstAttribute="top" secondItem="CqP-53-ujc" secondAttribute="top" constant="20" id="jal-Ec-i68"/>
+                            <constraint firstItem="mus-Yt-edD" firstAttribute="leading" secondItem="CqP-53-ujc" secondAttribute="leading" constant="16" id="rcJ-g9-dhs"/>
+                            <constraint firstItem="CqP-53-ujc" firstAttribute="trailing" secondItem="t6M-Tp-WNM" secondAttribute="trailing" constant="16" id="uqV-wv-nYe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rightQuestionsLabel" destination="mus-Yt-edD" id="Cl0-LU-TEq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTL-gc-LQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871.25" y="-107.74647887323944"/>
         </scene>
     </scenes>
 </document>

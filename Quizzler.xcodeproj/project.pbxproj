@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		C62FD91D29E95FB1000E40EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62FD91C29E95FB1000E40EE /* AppDelegate.swift */; };
 		C62FD91F29E95FB1000E40EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62FD91E29E95FB1000E40EE /* SceneDelegate.swift */; };
-		C62FD92129E95FB1000E40EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62FD92029E95FB1000E40EE /* ViewController.swift */; };
+		C62FD92129E95FB1000E40EE /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62FD92029E95FB1000E40EE /* QuestionViewController.swift */; };
 		C62FD92429E95FB1000E40EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62FD92229E95FB1000E40EE /* Main.storyboard */; };
 		C62FD92629E95FB1000E40EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62FD92529E95FB1000E40EE /* Assets.xcassets */; };
 		C62FD92929E95FB1000E40EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62FD92729E95FB1000E40EE /* LaunchScreen.storyboard */; };
 		C62FD93529E969B5000E40EE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62FD93429E969B5000E40EE /* Question.swift */; };
+		C6ABA64A29E9816200101EE7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABA64929E9816200101EE7 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C62FD91929E95FB1000E40EE /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62FD91C29E95FB1000E40EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C62FD91E29E95FB1000E40EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C62FD92029E95FB1000E40EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C62FD92029E95FB1000E40EE /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		C62FD92329E95FB1000E40EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C62FD92529E95FB1000E40EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62FD92829E95FB1000E40EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62FD92A29E95FB1000E40EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62FD93429E969B5000E40EE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C6ABA64929E9816200101EE7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,8 @@
 		C62FD93229E96005000E40EE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C62FD92029E95FB1000E40EE /* ViewController.swift */,
+				C62FD92029E95FB1000E40EE /* QuestionViewController.swift */,
+				C6ABA64929E9816200101EE7 /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,7 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62FD92129E95FB1000E40EE /* ViewController.swift in Sources */,
+				C6ABA64A29E9816200101EE7 /* ResultViewController.swift in Sources */,
+				C62FD92129E95FB1000E40EE /* QuestionViewController.swift in Sources */,
 				C62FD93529E969B5000E40EE /* Question.swift in Sources */,
 				C62FD91D29E95FB1000E40EE /* AppDelegate.swift in Sources */,
 				C62FD91F29E95FB1000E40EE /* SceneDelegate.swift in Sources */,

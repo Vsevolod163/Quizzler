@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuestionViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var questionLabel: UILabel!
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     private let questions = Question.getQuestions()
     private var questionIndex = 0
     private var isButtonTapped = true
+    private var rigthQuestionsCount = 0
     
     // MARK: - View life circle
     override func viewDidLoad() {
@@ -36,6 +37,12 @@ class ViewController: UIViewController {
         falseButton.layer.borderColor = UIColor.white.cgColor
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        
+        resultVC.rightQuestionsCount = rigthQuestionsCount
+    }
+    
     // MARK: - IB Actions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         guard isButtonTapped else { return }
@@ -45,12 +52,12 @@ class ViewController: UIViewController {
             sender.backgroundColor = .red
         } else {
             sender.backgroundColor = .green
+            rigthQuestionsCount += 1
         }
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { timer in
             sender.backgroundColor = UIColor.clear
             self.nextQuestion()
-            self.questionLabel.text = self.questions[self.questionIndex].title
             self.isButtonTapped = true
         }
     }
@@ -59,9 +66,13 @@ class ViewController: UIViewController {
     private func nextQuestion() {
         questionIndex += 1
         
-        if questionIndex == questions.count {
-            questionIndex = 0
+        if questionIndex >= questions.count {
+            performSegue(withIdentifier: "showResult", sender: nil)
+            
+            return
         }
+        
+        questionLabel.text = questions[questionIndex].title
     }
 }
 
