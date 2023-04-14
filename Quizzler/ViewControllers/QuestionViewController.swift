@@ -8,7 +8,12 @@
 import UIKit
 
 protocol ResultViewControllerDelegate: AnyObject {
-    func restart(withIndex index: Int, count: Int, shuffleQuestions: [Question], andQuestion question: String)
+    func restart(
+        withIndex index: Int,
+        count: Int,
+        shuffleQuestions: [Question],
+        andQuestion question: String
+    )
 }
 
 final class QuestionViewController: UIViewController {
