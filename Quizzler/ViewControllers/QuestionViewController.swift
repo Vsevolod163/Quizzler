@@ -11,7 +11,7 @@ protocol ResultViewControllerDelegate: AnyObject {
     func restart(withIndex index: Int, count: Int, shuffleQuestions: [Question], andQuestion question: String)
 }
 
-class QuestionViewController: UIViewController {
+final class QuestionViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var questionLabel: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var rightQuestionsLabel: UILabel!

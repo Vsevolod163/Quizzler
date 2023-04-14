@@ -5,8 +5,6 @@
 //  Created by Vsevolod Lashin on 14.04.2023.
 //
 
-import Foundation
-
 struct Question {
     let title: String
     let checkable: Checkable
