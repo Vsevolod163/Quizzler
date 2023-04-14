@@ -23,7 +23,7 @@ final class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         restartButton.layer.cornerRadius = 20
-        restartButton.layer.borderWidth = 1.0
+        restartButton.layer.borderWidth = 2.0
         restartButton.layer.borderColor = UIColor.white.cgColor
         
         rightQuestionsLabel.text = "You have \(rightQuestionsCount.formatted())/\(questions.count) right answers! 😊"

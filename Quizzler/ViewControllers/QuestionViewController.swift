@@ -35,8 +35,8 @@ final class QuestionViewController: UIViewController {
         trueButton.layer.cornerRadius = 20
         falseButton.layer.cornerRadius = 20
         
-        trueButton.layer.borderWidth = 1.0
-        falseButton.layer.borderWidth = 1.0
+        trueButton.layer.borderWidth = 2.0
+        falseButton.layer.borderWidth = 2.0
         
         trueButton.layer.borderColor = UIColor.white.cgColor
         falseButton.layer.borderColor = UIColor.white.cgColor
