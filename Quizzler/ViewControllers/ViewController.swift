@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     // MARK: - Private properties
     private let questions = Question.getQuestions()
     private var questionIndex = 0
+    private var isButtonTapped = true
     
     // MARK: - View life circle
     override func viewDidLoad() {
@@ -37,6 +38,9 @@ class ViewController: UIViewController {
 
     // MARK: - IB Actions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        guard isButtonTapped else { return }
+        isButtonTapped = false
+        
         if sender.currentTitle != questions[questionIndex].checkable.rawValue {
             sender.backgroundColor = .red
         } else {
@@ -47,8 +51,8 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.clear
             self.nextQuestion()
             self.questionLabel.text = self.questions[self.questionIndex].title
+            self.isButtonTapped = true
         }
-        
     }
     
     // MARK: - Private funcs
