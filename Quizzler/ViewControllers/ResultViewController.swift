@@ -26,7 +26,7 @@ class ResultViewController: UIViewController {
         rightQuestionsLabel.text = "You have \(rightQuestionsCount.formatted())/\(questions.count) right answers! 😊"
     }
     
-    @IBAction func restartButtonTapped() {
+    @IBAction func restartButtonPressed() {
         questions.shuffle()
         
         delegate.restart(
