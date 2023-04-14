@@ -56,15 +56,39 @@
 		C62FD91B29E95FB1000E40EE /* Quizzler */ = {
 			isa = PBXGroup;
 			children = (
-				C62FD91C29E95FB1000E40EE /* AppDelegate.swift */,
-				C62FD91E29E95FB1000E40EE /* SceneDelegate.swift */,
-				C62FD92029E95FB1000E40EE /* ViewController.swift */,
-				C62FD92229E95FB1000E40EE /* Main.storyboard */,
+				C62FD93229E96005000E40EE /* ViewControllers */,
+				C62FD93129E95FFB000E40EE /* Storyboards */,
+				C62FD93029E95FEE000E40EE /* App */,
 				C62FD92529E95FB1000E40EE /* Assets.xcassets */,
-				C62FD92729E95FB1000E40EE /* LaunchScreen.storyboard */,
-				C62FD92A29E95FB1000E40EE /* Info.plist */,
 			);
 			path = Quizzler;
+			sourceTree = "<group>";
+		};
+		C62FD93029E95FEE000E40EE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C62FD91C29E95FB1000E40EE /* AppDelegate.swift */,
+				C62FD91E29E95FB1000E40EE /* SceneDelegate.swift */,
+				C62FD92A29E95FB1000E40EE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C62FD93129E95FFB000E40EE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C62FD92229E95FB1000E40EE /* Main.storyboard */,
+				C62FD92729E95FB1000E40EE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C62FD93229E96005000E40EE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C62FD92029E95FB1000E40EE /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +313,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W83LB3ZRMV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quizzler/Info.plist;
+				INFOPLIST_FILE = Quizzler/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +326,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lashin.Quizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +344,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W83LB3ZRMV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quizzler/Info.plist;
+				INFOPLIST_FILE = Quizzler/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lashin.Quizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
