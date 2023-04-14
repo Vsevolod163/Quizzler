@@ -9,14 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var questionLabel: UILabel!
     
     @IBOutlet var trueButton: UIButton!
     @IBOutlet var falseButton: UIButton!
     
+    // MARK: - Private properties
     private let questions = Question.getQuestions()
     private var questionIndex = 0
     
+    // MARK: - View life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,13 +35,23 @@ class ViewController: UIViewController {
         falseButton.layer.borderColor = UIColor.white.cgColor
     }
 
-    
+    // MARK: - IB Actions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        nextQuestion()
-        questionLabel.text = questions[questionIndex].title
+        if sender.currentTitle != questions[questionIndex].checkable.rawValue {
+            sender.backgroundColor = .red
+        } else {
+            sender.backgroundColor = .green
+        }
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { timer in
+            sender.backgroundColor = UIColor.clear
+            self.nextQuestion()
+            self.questionLabel.text = self.questions[self.questionIndex].title
+        }
         
     }
     
+    // MARK: - Private funcs
     private func nextQuestion() {
         questionIndex += 1
         

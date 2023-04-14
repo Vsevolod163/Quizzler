@@ -30,6 +30,6 @@ struct Question {
 }
 
 enum Checkable: String {
-    case right = "Right"
-    case wrong = "True"
+    case right = "True"
+    case wrong = "False"
 }
