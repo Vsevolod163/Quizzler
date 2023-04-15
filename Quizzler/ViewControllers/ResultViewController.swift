@@ -36,6 +36,7 @@ final class ResultViewController: UIViewController {
         delegate.restart(
             withIndex: 0,
             count: 0,
+            progress: 0.0,
             shuffleQuestions: questions,
             andQuestion: questions[0].title
         )

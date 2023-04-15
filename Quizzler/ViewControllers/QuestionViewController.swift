@@ -11,6 +11,7 @@ protocol ResultViewControllerDelegate: AnyObject {
     func restart(
         withIndex index: Int,
         count: Int,
+        progress: Float,
         shuffleQuestions: [Question],
         andQuestion question: String
     )
@@ -94,9 +95,10 @@ final class QuestionViewController: UIViewController {
 
 // MARK: - ResultViewContollerDelegate
 extension QuestionViewController: ResultViewControllerDelegate {
-    func restart(withIndex index: Int, count: Int, shuffleQuestions: [Question], andQuestion question: String) {
+    func restart(withIndex index: Int, count: Int, progress:Float, shuffleQuestions: [Question], andQuestion question: String) {
         questionIndex = index
         rigthQuestionsCount = count
+        questionProgressBar.setProgress(progress, animated: true)
         questions = shuffleQuestions
         questionLabel.text = question
     }
