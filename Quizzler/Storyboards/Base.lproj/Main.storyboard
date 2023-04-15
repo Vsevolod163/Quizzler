@@ -82,7 +82,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bug-vR-nbf">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bug-vR-nbf">
                                 <rect key="frame" x="0.0" y="544" width="320" height="4"/>
                             </progressView>
                         </subviews>
@@ -104,6 +104,7 @@
                     <connections>
                         <outlet property="falseButton" destination="8iJ-Yl-3qm" id="CuN-ek-Lyz"/>
                         <outlet property="questionLabel" destination="CJU-Ut-EJE" id="0ne-KQ-ay2"/>
+                        <outlet property="questionProgressBar" destination="Bug-vR-nbf" id="YW7-gf-KKF"/>
                         <outlet property="trueButton" destination="EKa-cX-FcW" id="6uE-nO-KEw"/>
                         <segue destination="ecF-5y-E0S" kind="presentation" identifier="showResult" modalPresentationStyle="fullScreen" id="71e-cN-vYV"/>
                     </connections>

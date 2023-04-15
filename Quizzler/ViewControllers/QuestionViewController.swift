@@ -20,6 +20,7 @@ final class QuestionViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var questionProgressBar: UIProgressView!
     
     @IBOutlet var trueButton: UIButton!
     @IBOutlet var falseButton: UIButton!
@@ -72,7 +73,8 @@ final class QuestionViewController: UIViewController {
             sender.backgroundColor = UIColor.clear
             self.nextQuestion()
             self.isButtonTapped = true
-            
+            let progress = Float(self.questionIndex) / Float(self.questions.count)
+            self.questionProgressBar.setProgress(progress, animated: true)
         }
     }
     
