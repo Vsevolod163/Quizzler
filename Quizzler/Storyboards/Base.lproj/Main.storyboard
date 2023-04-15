@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-wW-X6y">
-                                <rect key="frame" x="16" y="388" width="288" height="140"/>
+                                <rect key="frame" x="16" y="374" width="288" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-cX-FcW">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="66"/>
@@ -77,22 +77,28 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Столица" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJU-Ut-EJE">
-                                <rect key="frame" x="16" y="-20" width="288" height="392"/>
+                                <rect key="frame" x="16" y="-20" width="288" height="378"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bug-vR-nbf">
+                                <rect key="frame" x="0.0" y="544" width="320" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.098483754671093382" green="0.031079204123067913" blue="0.23111652010050254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PsM-wW-X6y" secondAttribute="bottom" constant="40" id="Fz7-83-MId"/>
+                            <constraint firstItem="Bug-vR-nbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E1v-Kr-DCB"/>
+                            <constraint firstItem="Bug-vR-nbf" firstAttribute="top" secondItem="PsM-wW-X6y" secondAttribute="bottom" constant="30" id="Ibq-jf-L9X"/>
                             <constraint firstItem="CJU-Ut-EJE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jyc-ZT-TWV"/>
                             <constraint firstItem="PsM-wW-X6y" firstAttribute="top" secondItem="CJU-Ut-EJE" secondAttribute="bottom" constant="16" id="K50-sb-QhD"/>
                             <constraint firstItem="PsM-wW-X6y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XGZ-rE-jub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bug-vR-nbf" secondAttribute="bottom" constant="20" id="cUE-tI-FSH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsM-wW-X6y" secondAttribute="trailing" constant="16" id="dHR-bu-8gs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CJU-Ut-EJE" secondAttribute="trailing" constant="16" id="hug-KX-3RP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="CJU-Ut-EJE" secondAttribute="top" constant="20" id="pqG-dy-NLz"/>
+                            <constraint firstItem="Bug-vR-nbf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r0f-f0-tJY"/>
                         </constraints>
                     </view>
                     <connections>

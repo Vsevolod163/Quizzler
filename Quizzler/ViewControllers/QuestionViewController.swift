@@ -72,6 +72,7 @@ final class QuestionViewController: UIViewController {
             sender.backgroundColor = UIColor.clear
             self.nextQuestion()
             self.isButtonTapped = true
+            
         }
     }
     
