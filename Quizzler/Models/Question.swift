@@ -40,7 +40,7 @@ struct Question {
                 checkable: .right
             ),
             Question(
-                title: "Hawaiian pizza comes from Hawai",
+                title: "Hawaiian pizza comes from Hawaii",
                 checkable: .wrong
             ),
             Question(

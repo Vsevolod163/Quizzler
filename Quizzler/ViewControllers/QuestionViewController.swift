@@ -68,7 +68,7 @@ final class QuestionViewController: UIViewController {
             rigthQuestionsCount += 1
         }
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { timer in
             sender.backgroundColor = UIColor.clear
             self.nextQuestion()
             self.isButtonTapped = true
